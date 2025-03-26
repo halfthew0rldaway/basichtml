@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - bLeu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="video/bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <header>
+        <h1>Blog</h1>
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="blog-list">
+        <h2>Latest Posts</h2>
+
+        <div class="blog-container">
+            <div class="blog-item">
+                <img src="images/b1.jpeg" alt="Blog 1">
+                <div class="blog-content">
+                    <h3>The Metaverse: A Place Where Nobody Asked to Be</h3>
+                    <p>Remember when Zuckerberg told us we'd all be living in the metaverse? Yeah, turns out, people prefer reality...</p>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="images/b2.jpeg" alt="Blog 2">
+                <div class="blog-content">
+                    <h3>Smartphones Are Getting Smarter, But You’re Not</h3>
+                    <p>Your phone can recognize your face in the dark, predict your texts, and even suggest replies. Meanwhile, you still can’t remember your own WiFi password...</p>
+                </div>
+            </div>
+
+            <div class="blog-item">
+                <img src="images/b3.jpeg" alt="Blog 3">
+                <div class="blog-content">
+                    <h3>Quantum Computing: Don’t Worry, It’s Confusing for Everyone</h3>
+                    <p>It’s fast, it’s powerful, and it operates in multiple states at once—just like your brain at 2 AM deciding whether to sleep or scroll memes...</p>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">...</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 bLeu</p>
+    </footer>
+
+</body>
+</html>

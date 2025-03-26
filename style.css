@@ -1,0 +1,558 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========= FONT STYLING SECTIONS ========= */
+
+/* General Body Font */
+body {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+/* Header Font */
+header {
+   font-family: "Bank Gothic", "Eurostile", "Agency FB", sans-serif;
+}
+
+/* Navigation Font */
+.nav-links a {
+    font-family: "Bank Gothic", "Eurostile", "Agency FB", sans-serif;
+    font-size: 18px;
+}
+/* ===== HERO SECTION (Big Welcome Text) ===== */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Big Welcome Text */
+.hero h1 {
+    font-family: "Bauhaus 93", "Eurostile", sans-serif;
+    font-size: 4rem;
+    color: #ffcc00;
+    text-transform: uppercase;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+/* ===== MOVING TEXT POPPING IN ON SCROLL ===== */
+.running-text {
+    font-family: "Bauhaus 93", "Eurostile", sans-serif;
+    font-size: 3rem;
+    color: #ffcc00;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: sticky;
+    top: 50px; /* Adjusts when it appears */
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 5vw;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* When scrolled, the text slides in */
+body:has(.home-content) .running-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ===== MOVING TEXT ON SCROLL ===== */
+.scrolling-text {
+    font-family: "Bauhaus 93", "Eurostile", sans-serif;
+    font-size: 3rem;
+    color: #ffcc00;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: sticky;
+    top: 20px; /* Keeps text visible at the top */
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding-left: 5vw;
+    transition: transform 0.5s ease-out;
+}
+/* ===== HOME CONTENT (Boxed & Hidden at Start) ===== */
+.home-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    max-width: 800px;
+    margin: 50px auto;  
+    padding: 30px;
+    text-align: left;
+    background: rgba(26, 26, 46, 0.85); /* Dark semi-transparent box */
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(255, 204, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Home Content Text */
+.home-content p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+/* When Scrolled, Show the Home Content */
+body:has(.hero) .home-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.home-content p {
+    text-align: justify;
+}
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .home-content {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .home-content p {
+        font-size: 0.9rem;
+    }
+}
+/* ========= BACKGROUND & STRUCTURE ========= */
+body {
+    background-color: #1a1a2e;
+}
+
+/* Video Background */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Dark Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Header */
+header {
+    position: fixed;
+    width: 100%;
+    background: rgba(26, 26, 46, 0.8);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+/* Navigation */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover, .nav-links .active {
+    color: #ffcc00;
+}
+
+/* Hero Section (Now Transparent) */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: none;
+}
+
+
+.hero h2, .hero p {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: rgba(26, 26, 46, 0.9);
+    position: relative;
+}
+
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(26, 26, 46, 0.95);
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+button {
+    font-family: "Courier New", sans-serif; 
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 12px 25px;
+    border: 2px solid #ffcc00;
+    border-radius: 50px;
+    background: transparent;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background: #ffcc00;
+    color: #1a1a2e;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Button Click Effect */
+button:active {
+    transform: scale(0.95);
+}
+
+
+.button-dark {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+.button-dark:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.button-dark:active {
+    transform: scale(0.95);
+}
+
+.contact-form {
+    background: rgba(26, 26, 46, 0.85); /* Dark theme matching the website */
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0px 4px 15px rgba(255, 204, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+/* Contact Form Heading */
+.contact-form h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+/* Form Inputs */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #ffcc00;
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.5);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    background: transparent;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Hover Effect */
+.contact-form button:hover {
+    background: #ffcc00;
+    color: #1a1a2e;
+    box-shadow: 0px 0px 15px rgba(255, 204, 0, 0.8);
+    transform: scale(1.05);
+}
+
+/* Button Click Effect */
+.contact-form button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .contact-form {
+        max-width: 90%;
+        padding: 20px;
+    }
+}
+/* ====== Social Media Icons ====== */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ffcc00;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.2);
+}
+
+/* Hover Effect */
+.social-btn:hover {
+    background: #ffcc00;
+    color: #1a1a2e;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+/* ========= BLOG LIST STYLING ========= */
+.blog-list {
+    max-width: 800px;
+    margin: 80px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.blog-list {
+    margin-top: 80px;
+}
+.blog-list h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Blog Item */
+.blog-item {
+    display: flex;
+    align-items: center;
+    background: rgba(26, 26, 46, 0.85);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 204, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Blog Image */
+.blog-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Blog Content */
+.blog-content {
+    text-align: left;
+}
+
+.blog-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.blog-content p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hover Effect */
+.blog-item:hover {
+    box-shadow: 0px 6px 15px rgba(255, 204, 0, 0.4);
+    transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .blog-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-item img {
+        width: 100%;
+        height: auto;
+        margin: 0 0 10px 0;
+    }
+
+    .blog-content {
+        text-align: center;
+    }
+}
+/* Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    color: #ffcc00;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.pagination a:hover, .pagination a.active {
+    background: #ffcc00;
+    color: #000;
+}
